@@ -1,6 +1,6 @@
 
 import React from 'react';
-import EditToDoInput from './EditToDoInput'
+
 
 
 
@@ -27,8 +27,9 @@ export default class ToDoItemInEditMode extends React.Component{
                     </td>
                     <td> {this.props.item.status}</td>
                     <td>
-                        <button onClick={this.handleDeleteEvent.bind(this)} class="btn btn-sm btn-danger">delete</button> 
-                        <button onClick={this.handleEditEvent.bind(this)} class="btn btn-sm btn-success">save</button>
+                    
+                        <button type="button" onClick={this.handleDeleteEvent.bind(this)} class="btn btn-sm btn-danger">delete</button><span> </span>
+                        <button type="button" onClick={this.handleEditEvent.bind(this)} class="btn btn-sm btn-success">save</button>
                     </td>
                 </tr>                               
         )
