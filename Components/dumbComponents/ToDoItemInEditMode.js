@@ -13,12 +13,17 @@ export default class ToDoItemInEditMode extends React.Component{
         this.props.editToDo(this.props.item.id)
     }
 
+    handleChange(e){
+        this.props.addToEditToDo(e.target.value)
+    }
+
     render(){
         return(            
                 <tr>
-                    <td><EditToDoInput 
-                            addToEditToDo={this.props.addToEditToDo} 
-                            partialEditTodo ={this.props.partialEditTodo} /> 
+                    <td>
+                        <div class = "form-group">                            
+                            <input onChange={this.handleChange.bind(this)} class="form-control" value ={this.props.partialEditTodo}/>
+                        </div>
                     </td>
                     <td> {this.props.item.status}</td>
                     <td>
