@@ -12,7 +12,7 @@ import Layout from "./pages/Layout";
 import { Routing } from "./pages/Routing";
 import Settings from "./pages/Settings";
 import ToDo from "./pages/ToDo";
-
+j
 
 const networkInterface =  createNetworkInterface('http://localhost:9500/graphql');
 
