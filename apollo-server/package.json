@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/apollostack/apollo-starter-kit#readme",
   "dependencies": {
+    "arangojs": "^5.0.3",
+    "cors": "^2.8.0",
     "express": "4.13.4",
     "graphql-tools": "^0.4.2"
   },

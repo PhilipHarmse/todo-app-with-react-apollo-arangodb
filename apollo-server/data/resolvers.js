@@ -1,12 +1,13 @@
-import {default as GetDocByHandle} from './repo.js';
+//import {default as GetDocByHandle} from './repo.js';
 
 const resolvers = {
   Query: {
     author(root, args){
-       
-        return GetDocByHandle("100982097935").then((doc)=>{
-           return { id: doc.age, firstName: doc.firstName, lastName: 'World' };
-        });
+      console.log("this gets hit")
+       return { id: 1, firstName: args.firstName, lastName: args.lastName };
+        // return GetDocByHandle("100982097935").then((doc)=>{
+        //    return { id: doc.age, firstName: doc.firstName, lastName: 'World' };
+        // });
     },
   },
   Author: {

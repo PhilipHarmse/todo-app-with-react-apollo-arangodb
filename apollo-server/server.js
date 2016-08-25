@@ -3,10 +3,13 @@ import { apolloServer } from 'graphql-tools';
 import Schema from './data/schema';
 import Mocks from './data/mocks';
 import Resolvers from './data/resolvers';
+import cors from 'cors';
 
 const GRAPHQL_PORT = 9500;
 
-const graphQLServer = express();
+var app = express().use('*', cors());
+
+const graphQLServer = app;
 graphQLServer.use('/graphql', apolloServer({
   graphiql: true,
   pretty: true,
