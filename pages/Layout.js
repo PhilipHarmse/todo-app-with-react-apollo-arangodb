@@ -4,7 +4,7 @@ import { Navbar, Nav, NavItem } from 'react-bootstrap'
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 
-class Layout extends React.Component {
+export default class Layout extends React.Component {
     render() {
         return (
             <div>
@@ -35,19 +35,3 @@ class Layout extends React.Component {
     }
 }
 
-Layout.propTypes = {
-    data: React.PropTypes.object.isRequired,
-}
-
-const GET_AUTHER = gql`
-    query {
-    author(firstName: "Philip", lastName: "Harmse") {
-        firstName
-        lastName
-    }
-    }
-`;
-
-const withAuther = graphql(GET_AUTHER);
-const LayoutWithData = withAuther(Layout);
-export default LayoutWithData
